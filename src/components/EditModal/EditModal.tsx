@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
+import { useMutation, useQueryClient } from "react-query";
+import { api } from "../../api/api";
 import { User } from "../../models/UserModel";
 
 interface Props {
@@ -10,9 +12,17 @@ interface Props {
 export function EditModal({ show, handleClose, user }: Props) {
   const [value, setValue] = useState(user.name);
 
-  function handleSubmit() {
-    //TODO
-  }
+  const queryClient = useQueryClient();
+
+  const { isLoading, mutate } = useMutation(
+    () => api.updateUserName(user.id, value),
+    {
+      onSuccess: () => {
+        queryClient.invalidateQueries("user-list");
+        handleClose();
+      },
+    }
+  );
 
   return (
     <Modal show={show} onHide={handleClose}>
@@ -31,8 +41,8 @@ export function EditModal({ show, handleClose, user }: Props) {
         <Button variant="secondary" onClick={handleClose}>
           Fechar
         </Button>
-        <Button variant="primary" onClick={() => handleSubmit()}>
-          Salvar
+        <Button variant="primary" onClick={() => mutate()}>
+          {isLoading ? "Carrendo..." : "Salvar"}
         </Button>
       </Modal.Footer>
     </Modal>
