@@ -1,10 +1,15 @@
+import { QueryClient, QueryClientProvider } from "react-query";
 import { UserList } from "./components/UserList/UserList";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <div>
-      <UserList />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div>
+        <UserList />
+      </div>
+    </QueryClientProvider>
   );
 }
 
