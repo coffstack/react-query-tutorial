@@ -1,46 +1,27 @@
-# Getting Started with Create React App
+<div align="center">
+<img src="docs/images/react-query-logo.svg"  width="400" alt="Logo" />
+<h2> React Query Tutorial em TypeScript -  Queries, Mutations e Query Invalidation 
+</h2>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
+</div>
 
-## Available Scripts
+React Query é uma biblioteca utilizada para fazer fetch, cache e update de dados em aplicações React e React Native, sem a necessidade de um estado global (Redux ou Context API).
 
-In the project directory, you can run:
+Este projeto foi construído no vídeo sobre React Query no canal da Coffstack. [Acesse o tutorial em nosso canal no YouTube clicando aqui!](https://www.youtube.com/Coffstack/videos).
 
-### `npm start`
+## O que você aprenderá?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### React Query
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Queries**: busca de dados através do [useQuery](https://react-query.tanstack.com/reference/useQuery#_top).
+- **Mutations**: atualização de dados através do [useMutation](https://react-query.tanstack.com/reference/useMutation#_top).
+- **Query Invalidation**: Mantenha suas queries sempre atualizadas de uma forma bem simples através do [queryClient.invalidateQueries](https://react-query.tanstack.com/guides/query-invalidation#_top).
 
-### `npm test`
+#### TypeScript
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Projeto feito com TypeScript de ponta a ponta, extraindo o máximo do poder da tipagem para tornar nossas funções mais inteligentes!
 
-### `npm run build`
+#### Criar uma API Mockada
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para esse projeto criamos uma API mockada para fins de teste. Através do [mockapi.io](https://mockapi.io/) criamos uma lista de usuários gerada automaticamente, e de forma simples temos acesso a uma URL onde podemos usar os métodos GET, POST, PUT e DELETE.
