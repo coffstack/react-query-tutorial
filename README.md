@@ -8,7 +8,7 @@
 
 React Query é uma biblioteca utilizada para fazer fetch, cache e update de dados em aplicações React e React Native, sem a necessidade de um estado global (Redux ou Context API).
 
-Este projeto foi construído no vídeo sobre React Query no canal da Coffstack. [Acesse o tutorial em nosso canal no YouTube clicando aqui!](https://www.youtube.com/Coffstack/videos).
+Este projeto foi construído no vídeo sobre React Query no canal da Coffstack. [Acesse o tutorial em nosso canal no YouTube clicando aqui!](https://youtu.be/mo7MZFYYzWM).
 
 ## O que você aprenderá?
 
